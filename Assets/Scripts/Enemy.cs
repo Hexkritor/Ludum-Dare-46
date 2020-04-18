@@ -26,7 +26,6 @@ public class Enemy : Unit
         distanceToWaypoint = Vector2.Distance(gameObject.transform.position, currentPoint.transform.position);
         if (Vector2.Distance(gameObject.transform.position, currentPoint.transform.position) <= waypointRadius)
         {
-            print("TRIGGERED");
             if (currentPoint.type == Waypoint.Type.END)
             {
                 Destroy(gameObject);
