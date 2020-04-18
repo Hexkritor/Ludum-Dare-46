@@ -5,13 +5,13 @@ using UnityEngine;
 public class Sound_UI_Button : MonoBehaviour
 {
     [FMODUnity.EventRef]
-    public string UIButton; // Переменная для ивента
+    public string UI_Button_Sound; // Переменная для ивента
 
     FMOD.Studio.EventInstance EventInstance; // Переменная для инстанаса
 
-    public void PlayUiButton()
+    public void Play_UI_Sound()
     {
-        EventInstance = FMODUnity.RuntimeManager.CreateInstance(UIButton);//создаёт  контейнер для семпла
+        EventInstance = FMODUnity.RuntimeManager.CreateInstance(UI_Button_Sound);//создаёт  контейнер для семпла
         EventInstance.start();//Проигрывает этот контейнер
         EventInstance.release();//Удаляет этот контейнер
     }

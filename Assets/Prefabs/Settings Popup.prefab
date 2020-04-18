@@ -1843,8 +1843,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6154418771031513777}
-        m_MethodName: PlayUiButton
+      - m_Target: {fileID: 3256615305867734619}
+        m_MethodName: Play_UI_Sound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1893,7 +1893,7 @@ RectTransform:
   - {fileID: 2301206143033960461}
   - {fileID: 5385986255472704213}
   - {fileID: 3819460095072852564}
-  - {fileID: 6154418769858222148}
+  - {fileID: 6668472694911666452}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2181,17 +2181,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sounds
       objectReference: {fileID: 0}
+    - target: {fileID: 9204213529684010906, guid: 586eefa44f977fd4c8d6fbb4f171f063,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586eefa44f977fd4c8d6fbb4f171f063, type: 3}
---- !u!4 &6154418769858222148 stripped
+--- !u!4 &6668472694911666452 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8527601793093842634, guid: 586eefa44f977fd4c8d6fbb4f171f063,
+  m_CorrespondingSourceObject: {fileID: 9204213529684010906, guid: 586eefa44f977fd4c8d6fbb4f171f063,
     type: 3}
   m_PrefabInstance: {fileID: 2535741982000737934}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6154418771031513777 stripped
+--- !u!114 &3256615305867734619 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8527601791920419903, guid: 586eefa44f977fd4c8d6fbb4f171f063,
+  m_CorrespondingSourceObject: {fileID: 1009107273536651477, guid: 586eefa44f977fd4c8d6fbb4f171f063,
     type: 3}
   m_PrefabInstance: {fileID: 2535741982000737934}
   m_PrefabAsset: {fileID: 0}
