@@ -36,16 +36,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 737410893837007107}
-  - {fileID: 495497506395590371}
+  - {fileID: 8750924231109768359}
+  - {fileID: 4023110162415644348}
   EditorEvents:
-  - {fileID: -3998605713295303533}
+  - {fileID: 7536663132309452518}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 495497506395590371}
+  - {fileID: 4023110162415644348}
   StringsBanks:
-  - {fileID: 737410893837007107}
-  stringsBankWriteTime: 637228129971096396
+  - {fileID: 8750924231109768359}
+  stringsBankWriteTime: 637228221791384788
   cacheVersion: 3
 --- !u!114 &495497506395590371
 MonoBehaviour:
@@ -86,4 +86,65 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 740
+  Exists: 1
+--- !u!114 &4023110162415644348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: LD-46 FMOD Project/LD-46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637228221791305016
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7536663132309452518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UI Buttons
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UI Buttons
+  guid: 2ce4f7305f0cf34698ea38b50c14175c
+  Banks:
+  - {fileID: 4023110162415644348}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 187
+--- !u!114 &8750924231109768359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: LD-46 FMOD Project/LD-46/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637228221791384788
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 738
   Exists: 1
