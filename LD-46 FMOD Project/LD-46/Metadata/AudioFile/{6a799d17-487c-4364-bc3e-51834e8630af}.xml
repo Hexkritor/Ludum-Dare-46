@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{6a799d17-487c-4364-bc3e-51834e8630af}">
+		<property name="assetPath">
+			<value>Menu Music/Trans cymb 2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.5554421768707485</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{be13a403-3b2a-47f0-a377-818385592738}</destination>
+		</relationship>
+	</object>
+</objects>
