@@ -13,17 +13,25 @@ public class Unit : MonoBehaviour
 
     protected Rigidbody2D _rigidbody;
 
+
+
+    [SerializeField]
+    protected Waypoint _currentPoint;
+    [SerializeField]
+    protected float waypointRadius;
     [SerializeField]
     protected Type _type;
     [SerializeField]
     protected int _maxHp;
     protected int _hp;
     [SerializeField]
-    protected int _damage;
-    [SerializeField]
     protected float _speed;
     [SerializeField]
+    protected int _damage;
+    [SerializeField]
     protected float _attackSpeed;
+    [SerializeField]
+    protected float _rangeToAttack;
     protected float _attackCooldown;
     protected bool _isAttacking;
 

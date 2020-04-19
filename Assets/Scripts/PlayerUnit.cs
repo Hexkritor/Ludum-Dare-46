@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Unit
+public class PlayerUnit : Unit
 {
     [SerializeField]
     private float distanceToWaypoint;
 
-    // Start is called before the first frame update
     override protected void Start()
     {
         base.Start();
@@ -26,7 +25,7 @@ public class Enemy : Unit
             {
                 if (_currentPoint.type == Waypoint.Type.END)
                 {
-                    Destroy(gameObject);
+                    _currentPoint = null;
                 }
                 else if (_currentPoint.nextWaypoint)
                 {
@@ -36,12 +35,6 @@ public class Enemy : Unit
         }
     }
 
-    public void SetWaypoint(Waypoint point)
-    {
-        _currentPoint = point;
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         Move();
