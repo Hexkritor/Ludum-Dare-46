@@ -46,6 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4181512556873031430}
   - component: {fileID: 21588347182951311}
+  - component: {fileID: 2934644937950539915}
   m_Layer: 5
   m_Name: Master Volume Slider
   m_TagString: Untagged
@@ -125,17 +126,41 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5213368265970895926}
-        m_MethodName: SetVolumeSound
-        m_Mode: 5
+      - m_Target: {fileID: 0}
+        m_MethodName: VCAVolumeChange
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MasterVolume
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2934644937950539915}
+        m_MethodName: VCAVolumeChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2934644937950539915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379071757240234202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4473b782d0210d4cbaa04ca3adea1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vcaName: All
 --- !u!1 &447916585262171521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577512538972503189}
   - component: {fileID: 4474221404761609786}
+  - component: {fileID: 564420856602317436}
   m_Layer: 5
   m_Name: Sound Volume Slider
   m_TagString: Untagged
@@ -1376,6 +1402,30 @@ MonoBehaviour:
           m_StringArgument: SoundVolume
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 564420856602317436}
+        m_MethodName: VCAVolumeChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &564420856602317436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5983305013439096527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4473b782d0210d4cbaa04ca3adea1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vcaName: Sound
 --- !u!1 &6735160360379273335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,6 +2038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2301206143033960461}
   - component: {fileID: 5224249675799865029}
+  - component: {fileID: 4081940893582319973}
   m_Layer: 5
   m_Name: Music Volume Slider
   m_TagString: Untagged
@@ -2078,6 +2129,30 @@ MonoBehaviour:
           m_StringArgument: MusicVolume
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4081940893582319973}
+        m_MethodName: VCAVolumeChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4081940893582319973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735012142753627319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4473b782d0210d4cbaa04ca3adea1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vcaName: Music
 --- !u!1 &9145852821282017462
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,3 +2,4 @@ obj/**
 Library/**
 Temp/**
 .vs/**
+Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
