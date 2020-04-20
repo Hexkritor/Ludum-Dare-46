@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6997696827683452706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: LD-46 FMOD Project/LD-46/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229833479656366
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-5717088801070002664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +89,7 @@ MonoBehaviour:
   lastModified: 637229300665446182
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-786686590165014882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,16 +122,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 3107384898388022845}
-  - {fileID: -3646827464327922369}
+  - {fileID: -6997696827683452706}
   EditorEvents:
   - {fileID: 1573542703155203331}
   - {fileID: 7257757157657270545}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -3646827464327922369}
+  - {fileID: -6997696827683452706}
   StringsBanks:
   - {fileID: 3107384898388022845}
-  stringsBankWriteTime: 637229300665525985
+  stringsBankWriteTime: 637229833479676383
   cacheVersion: 3
 --- !u!114 &1573542703155203331
 MonoBehaviour:
@@ -130,7 +148,7 @@ MonoBehaviour:
   Path: event:/UI/UI Buttons
   guid: 2ce4f7305f0cf34698ea38b50c14175c
   Banks:
-  - {fileID: -3646827464327922369}
+  - {fileID: -6997696827683452706}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -152,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: LD-46 FMOD Project/LD-46/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637229300665525985
+  lastModified: 637229833479676383
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -173,7 +191,7 @@ MonoBehaviour:
   Path: event:/Music/Menu Music
   guid: 2fb8172528ac86488a4dd7f9bca01278
   Banks:
-  - {fileID: -3646827464327922369}
+  - {fileID: -6997696827683452706}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
