@@ -45,7 +45,7 @@ public class PlayerUnit : Unit
                 }
                 else
                 {
-                    _rigidbody.velocity = ((Vector2)_currentPoint.transform.position - (Vector2)gameObject.transform.position).normalized * _speed * Time.fixedDeltaTime;
+                    _rigidbody.velocity = ((Vector2)_attackingUnit.transform.position - (Vector2)gameObject.transform.position).normalized * _speed * Time.fixedDeltaTime;
                 }
             }
             else
@@ -61,36 +61,14 @@ public class PlayerUnit : Unit
                 _lowMinSpeedTime = 0;
             if (_lowMinSpeedTime >= 1)
             {
-                if (_currentPoint.nextWaypoint && _currentPoint.prevWaypoint)
-                {
-                    _currentPoint =
-                        (Vector2.Distance(gameObject.transform.position, _currentPoint.nextWaypoint.transform.position) >
-                        Vector2.Distance(gameObject.transform.position, _currentPoint.prevWaypoint.transform.position)) ? _currentPoint.prevWaypoint : _currentPoint.nextWaypoint;
-                    _lowMinSpeedTime = 0;
-                }
-                else if (_currentPoint.nextWaypoint)
-                {
-                    _currentPoint =
-                        (Vector2.Distance(gameObject.transform.position, _currentPoint.nextWaypoint.transform.position) >
-                        Vector2.Distance(gameObject.transform.position, _currentPoint.transform.position)) ? _currentPoint : _currentPoint.nextWaypoint;
-                    _lowMinSpeedTime = 0;
-                }
-                else if (_currentPoint.prevWaypoint)
-                {
-                    _currentPoint =
-                        (Vector2.Distance(gameObject.transform.position, _currentPoint.prevWaypoint.transform.position) >
-                        Vector2.Distance(gameObject.transform.position, _currentPoint.transform.position)) ? _currentPoint : _currentPoint.prevWaypoint;
-                    _lowMinSpeedTime = 0;
-                }
-                else
-                {
-                    _currentPoint = null;
-                }
+                _currentPoint = null;
+                _lowMinSpeedTime = 0;
             }
             if (_currentPoint)
                 _rigidbody.velocity = ((Vector2)_currentPoint.transform.position - (Vector2)gameObject.transform.position).normalized * _speed * Time.fixedDeltaTime;
             _animator.SetBool("isMoving", true);
-            _render.flipX = _rigidbody.velocity.normalized.x < 0;
+            foreach (SpriteRenderer _render in _renders)
+                _render.flipX = _rigidbody.velocity.normalized.x < 0;
         }
         else
         {

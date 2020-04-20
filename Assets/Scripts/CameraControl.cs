@@ -51,7 +51,7 @@ public class CameraControl : MonoBehaviour
         {
             movement.x += movementSpeed;
         }
-        if (movement != Vector3.zero)
+        if (movement != Vector3.zero || Input.mouseScrollDelta.y != 0)
         {
             position += movement;
             position.y = Mathf.Clamp(position.y, bounds.yMin + camera.orthographicSize, bounds.yMax - camera.orthographicSize);

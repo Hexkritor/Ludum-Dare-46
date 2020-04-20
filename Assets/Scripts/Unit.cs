@@ -12,11 +12,12 @@ public class Unit : MonoBehaviour
     }
 
     protected Rigidbody2D _rigidbody;
+    [SerializeField]
     protected Animator _animator;
     [SerializeField]
     protected CircleCollider2D _aggroTrigger;
     [SerializeField]
-    protected SpriteRenderer _render;
+    protected SpriteRenderer[] _renders;
 
 
     [SerializeField]
@@ -42,8 +43,11 @@ public class Unit : MonoBehaviour
     protected float _rangeToAttack;
     [SerializeField]
     protected float _rangeAggro;
+    [SerializeField]
     protected bool _isAttacking;
+    [SerializeField]
     protected bool _isAggro;
+    [SerializeField]
     protected bool _isDead;
 
     public Type type { get { return _type; } }
@@ -56,7 +60,6 @@ public class Unit : MonoBehaviour
     {
         _hp = _maxHp;
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
-        _animator = gameObject.GetComponent<Animator>();
         if (_aggroTrigger)
             _aggroTrigger.radius = _rangeAggro;
     }
@@ -73,7 +76,8 @@ public class Unit : MonoBehaviour
 
     public void UpdateLayerPosition()
     {
-        _render.sortingOrder = -Mathf.FloorToInt(gameObject.transform.position.y * 20);
+        foreach(SpriteRenderer _render in _renders)
+            _render.sortingOrder = -Mathf.FloorToInt(gameObject.transform.position.y * 20);
     }
 
     public void SetAggro(bool value)

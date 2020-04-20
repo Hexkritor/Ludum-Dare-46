@@ -30,6 +30,7 @@ public class Enemy : Unit
             {
                 _isAttacking = false;
             }
+            _rigidbody.velocity = Vector2.zero;
         }
         else if (_isAggro && !_isAttacking)
         {
@@ -80,10 +81,9 @@ public class Enemy : Unit
                 }
             }
             _rigidbody.velocity = ((Vector2)_currentPoint.transform.position - (Vector2)gameObject.transform.position).normalized * _speed * Time.fixedDeltaTime;
-        }
-        else 
-        {
-            _rigidbody.velocity = Vector2.zero;
+            _animator.SetBool("isMoving", true);
+            foreach (SpriteRenderer _render in _renders)
+                _render.flipX = _rigidbody.velocity.normalized.x < 0;
         }
         if (_currentPoint)
         {

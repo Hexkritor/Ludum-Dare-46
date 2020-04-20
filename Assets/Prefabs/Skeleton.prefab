@@ -174,8 +174,8 @@ GameObject:
   - component: {fileID: 6773652760292188546}
   - component: {fileID: 8517612077886630701}
   - component: {fileID: 2996938479334741523}
-  - component: {fileID: 5000251740624988428}
   - component: {fileID: 8178393354792596833}
+  - component: {fileID: 7166431539106301684}
   m_Layer: 8
   m_Name: Skeleton
   m_TagString: PlayerUnit
@@ -233,8 +233,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fd6c985c28e9a4080ee50c5c07bee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 7166431539106301684}
   _aggroTrigger: {fileID: 6165996848885167747}
-  _render: {fileID: 3095463005343341164}
+  _renders:
+  - {fileID: 3095463005343341164}
   _attackingUnit: {fileID: 0}
   _currentPoint: {fileID: 0}
   waypointRadius: 0.1
@@ -243,8 +245,11 @@ MonoBehaviour:
   _speed: 100
   _minSpeed: 0.1
   _damage: 1
-  _rangeToAttack: 0.2
+  _rangeToAttack: 0.5
   _rangeAggro: 1
+  _isAttacking: 0
+  _isAggro: 0
+  _isDead: 0
   selectCircle: {fileID: 365124711380403430}
   distanceToWaypoint: 0
 --- !u!61 &2996938479334741523
@@ -273,7 +278,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.66, y: 1}
   m_EdgeRadius: 0
---- !u!95 &5000251740624988428
+--- !u!58 &8178393354792596833
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057430353195397583}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
+--- !u!95 &7166431539106301684
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -292,22 +313,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &8178393354792596833
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4057430353195397583}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.25
 --- !u!1 &7400683364850204931
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +374,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _unit: {fileID: 8517612077886630701}
-  _mask:
-    serializedVersion: 2
-    m_Bits: 8192
+  _mask: EnemyUnit

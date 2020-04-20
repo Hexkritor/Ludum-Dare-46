@@ -7,10 +7,11 @@ public class AggroCollider : MonoBehaviour
     [SerializeField]
     private Unit _unit;
     [SerializeField]
-    private LayerMask _mask;
+    private string _mask;
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.layer == _mask.value)
+        if (col.gameObject.tag == _mask)
         {
             _unit.SetAggro(true);
             _unit.SetAttackingUnit(col.gameObject.GetComponent<Unit>());
