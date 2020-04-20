@@ -19,4 +19,9 @@ public class Waypoint : MonoBehaviour
     [SerializeField]
     private Type _type;
     public Type type { get { return _type; } }
+
+    public void SetType(Type t)
+    {
+        t = _type;
+    }
 }

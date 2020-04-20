@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerUnit
+  - EnemyUnit
   layers:
   - Default
   - TransparentFX
@@ -13,12 +15,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Wall
+  - Camera
+  - PlayerAggro
+  - EnemyAggro
   - 
   - 
   - 
@@ -41,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Canvas
-    uniqueID: 4175837697
+  - name: Actvie Objects
+    uniqueID: 1596173157
+    locked: 0
+  - name: UI
+    uniqueID: 1785901849
     locked: 0
