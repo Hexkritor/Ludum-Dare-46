@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{1d2da491-d064-4cd8-8261-a42dca207b41}">
+		<property name="assetPath">
+			<value>Units/Skelet Attack 3  [2020-04-20 024819].wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.312517006802721</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{be13a403-3b2a-47f0-a377-818385592738}</destination>
+		</relationship>
+	</object>
+</objects>

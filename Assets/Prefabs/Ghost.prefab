@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 3592145336268530840}
   - component: {fileID: 2581380389454550797}
   - component: {fileID: 6368014558562354103}
+  - component: {fileID: 1707225713403360148}
   m_Layer: 8
   m_Name: Ghost
   m_TagString: PlayerUnit
@@ -389,3 +390,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef724290d3c26fc4e94e97969622029a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1707225713403360148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712287295997616182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abef038e63e9a0f42a273ed22ce074da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundAtt: event:/Units/Ghost Att
+  SoundDth: event:/Units/Ghost Dth

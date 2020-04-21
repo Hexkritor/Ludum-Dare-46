@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 4365114748691813804}
   - component: {fileID: 3359467977981142585}
   - component: {fileID: 6130074305832465027}
+  - component: {fileID: 5309473220934178532}
   m_Layer: 8
   m_Name: Butcher
   m_TagString: PlayerUnit
@@ -389,3 +390,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef724290d3c26fc4e94e97969622029a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5309473220934178532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477356390486282498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abef038e63e9a0f42a273ed22ce074da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundAtt: event:/Units/Butcher Att
+  SoundDth: event:/Units/Butcher Dth

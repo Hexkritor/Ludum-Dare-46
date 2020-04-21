@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{e1b90715-b42b-4bf5-97ca-9fcaae2e576e}">
+		<property name="assetPath">
+			<value>Units/Omon Death 2 [2020-04-21 111302].wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{be13a403-3b2a-47f0-a377-818385592738}</destination>
+		</relationship>
+	</object>
+</objects>
