@@ -24,6 +24,9 @@ public class Unit : MonoBehaviour
     protected Unit _attackingUnit;
 
     [SerializeField]
+    protected Vector3Int _resourcesAfterDeath;
+
+    [SerializeField]
     protected Waypoint _currentPoint;
     [SerializeField]
     protected float waypointRadius;
@@ -97,7 +100,7 @@ public class Unit : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _hp -= damage;
-        if (_hp < 0)
+        if (_hp <= 0)
         {
             _isDead = true;
             _animator.SetBool("isDead", true);
@@ -106,6 +109,7 @@ public class Unit : MonoBehaviour
 
     public void RemoveUnit()
     {
+        Camera.main.GetComponent<GameLogic>().IncreaseResources(_resourcesAfterDeath.x, _resourcesAfterDeath.y, _resourcesAfterDeath.z);
         Destroy(gameObject);
     }
 

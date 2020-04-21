@@ -24,6 +24,7 @@ public class PlayerUnit : Unit
             _animator.SetBool("isAttacking", true);
             if (_attackingUnit)
             {
+                _rigidbody.velocity = Vector2.zero;
                 if (Vector2.Distance(gameObject.transform.position, _attackingUnit.gameObject.transform.position) > _rangeToAttack)
                 {
                     _isAttacking = false;
@@ -33,6 +34,7 @@ public class PlayerUnit : Unit
             else
             {
                 _isAttacking = false;
+                _animator.SetBool("isAttacking", false);
             }
         }
         else if (_isAggro && !_isAttacking)
@@ -43,9 +45,14 @@ public class PlayerUnit : Unit
                 {
                     _isAttacking = true;
                 }
+                else if (Vector2.Distance(gameObject.transform.position, _attackingUnit.gameObject.transform.position) <= _rangeAggro)
+                {
+                    _rigidbody.velocity = ((Vector2)_currentPoint.transform.position - (Vector2)gameObject.transform.position).normalized * _speed * Time.fixedDeltaTime;
+                }
                 else
                 {
-                    _rigidbody.velocity = ((Vector2)_attackingUnit.transform.position - (Vector2)gameObject.transform.position).normalized * _speed * Time.fixedDeltaTime;
+                    _attackingUnit = null;
+                    _isAggro = false;
                 }
             }
             else

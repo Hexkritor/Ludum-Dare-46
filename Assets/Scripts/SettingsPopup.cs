@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingsPopup : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class SettingsPopup : MonoBehaviour
     public Slider masterVolume;
     public Slider musicVolume;
     public Slider soundVolume;
+    public Button menuButton;
 
     public void GetParam(string value, Slider slider)
     {
@@ -41,6 +43,7 @@ public class SettingsPopup : MonoBehaviour
         GetParam("MasterVolume", masterVolume);
         GetParam("MusicVolume", musicVolume);
         GetParam("SoundVolume", soundVolume);
+        menuButton.gameObject.SetActive(SceneManager.GetActiveScene().name == "Game");
     }
 
     public void Close()
@@ -49,5 +52,9 @@ public class SettingsPopup : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", musicVolume.value);
         PlayerPrefs.SetFloat("SoundVolume", soundVolume.value);
         Destroy(gameObject);
+    }
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

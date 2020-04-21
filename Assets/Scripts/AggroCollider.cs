@@ -17,4 +17,12 @@ public class AggroCollider : MonoBehaviour
             _unit.SetAttackingUnit(col.gameObject.GetComponent<Unit>());
         }
     }
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == _mask)
+        {
+            _unit.SetAggro(true);
+            _unit.SetAttackingUnit(col.gameObject.GetComponent<Unit>());
+        }
+    }
 }

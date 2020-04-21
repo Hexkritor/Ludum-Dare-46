@@ -20,6 +20,7 @@ public class Enemy : Unit
             _animator.SetBool("isAttacking", true);
             if (_attackingUnit)
             {
+                _rigidbody.velocity = Vector2.zero;
                 if (Vector2.Distance(gameObject.transform.position, _attackingUnit.gameObject.transform.position) > _rangeToAttack)
                 {
                     _isAttacking = false;
@@ -29,6 +30,7 @@ public class Enemy : Unit
             else
             {
                 _isAttacking = false;
+                _animator.SetBool("isAttacking", false);
             }
             _rigidbody.velocity = Vector2.zero;
         }
@@ -40,9 +42,14 @@ public class Enemy : Unit
                 {
                     _isAttacking = true;
                 }
-                else
+                else if (Vector2.Distance(gameObject.transform.position, _attackingUnit.gameObject.transform.position) <= _rangeAggro)
                 {
                     _rigidbody.velocity = ((Vector2)_currentPoint.transform.position - (Vector2)gameObject.transform.position).normalized * _speed * Time.fixedDeltaTime;
+                }
+                else
+                {
+                    _attackingUnit = null;
+                    _isAggro = false;
                 }
             }
             else
@@ -92,6 +99,7 @@ public class Enemy : Unit
             {
                 if (_currentPoint.type == Waypoint.Type.END)
                 {
+                    Camera.main.GetComponent<GameLogic>().IncreaseCryptLife(-1);
                     Destroy(gameObject);
                 }
                 else if (_currentPoint.nextWaypoint)
@@ -100,6 +108,11 @@ public class Enemy : Unit
                 }
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        Camera.main.GetComponent<GameLogic>().IncreaseEnemyArmyCount(-1);
     }
 
     // Update is called once per frame
